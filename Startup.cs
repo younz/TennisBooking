@@ -7,6 +7,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TennisBooking.Interface;
+using TennisBooking.Services;
 
 namespace TennisBooking
 {
@@ -23,6 +25,9 @@ namespace TennisBooking
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddTransient<IMembers, MemberServices>();
+            services.AddTransient<IBooking, BookingServices>();
+            services.AddTransient<ILane, LaneServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

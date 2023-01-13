@@ -1,0 +1,40 @@
+﻿@page
+@model TennisBooking.Pages.Bookings.DeleteBookingModel
+@{
+    ViewData["Title"]= "DeleteBooking";
+}
+
+<h1> Bekræft sletning af booking</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="from-group">
+                <input asp-for="@Model.currentBooking.BookingId" class="form-control" hidden="" />
+            </div>
+            <div class="from-group">
+                <label asp-for="@Model.currentBooking.BookingTime" class="control-label"> valgt booking tidspunkt </label>
+                <input type="date" asp-for="@Model.currentBooking.BookingTime" class="form-control" readonly="" />
+            </div>
+            <div class="from-group">
+                <label asp-for="@Model.currentBooking.LaneId" class="control-label">Banenummer</label>
+                @*<select asp-for="@Model.Bookings.BoatId"></select>*@
+                <input asp-for="@Model.currentBooking.LaneId"  class="form-control" readonly=""/>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.currentBooking.FirstMemberId" class="control-label">Booker </label>
+                <input asp-for="@Model.currentBooking.FirstMemberId"  class="form-control" readonly=""/>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.currentBooking.PartnerId" class="control-label">Partner </label>
+                <input asp-for="@Model.currentBooking.PartnerId"  class="form-control" readonly=""/>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="@Model.Booking.Confirmation"class="control-label"></label>
+            <input type="checkbox" asp-for="@Model.Booking.Confirmation" class="form-control"/>
+        </div>*@
+            <div class="form-group">
+                <input type="submit" value="Remove" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

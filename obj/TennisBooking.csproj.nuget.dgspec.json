@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\youna\\source\\repos\\younz\\TennisBooking\\TennisBooking.csproj": {}
+    "C:\\Users\\youna\\source\\repos\\TennisBooking\\TennisBooking.csproj": {}
   },
   "projects": {
-    "C:\\Users\\youna\\source\\repos\\younz\\TennisBooking\\TennisBooking.csproj": {
+    "C:\\Users\\youna\\source\\repos\\TennisBooking\\TennisBooking.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\youna\\source\\repos\\younz\\TennisBooking\\TennisBooking.csproj",
+        "projectUniqueName": "C:\\Users\\youna\\source\\repos\\TennisBooking\\TennisBooking.csproj",
         "projectName": "TennisBooking",
-        "projectPath": "C:\\Users\\youna\\source\\repos\\younz\\TennisBooking\\TennisBooking.csproj",
+        "projectPath": "C:\\Users\\youna\\source\\repos\\TennisBooking\\TennisBooking.csproj",
         "packagesPath": "C:\\Users\\youna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\youna\\source\\repos\\younz\\TennisBooking\\obj\\",
+        "outputPath": "C:\\Users\\youna\\source\\repos\\TennisBooking\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\youna\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

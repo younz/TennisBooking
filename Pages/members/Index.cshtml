@@ -1,0 +1,66 @@
+﻿@page
+@using TennisBooking.Services
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1> Nuværende medlemmer</h1>
+
+<p>
+    <a asp-page="CreateMember"> Tilføj Medlem </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Medlemsnummer
+            </th>
+            <th>
+                Fornavn
+            </th>
+            <th>
+                Efternavn
+            </th>
+            <th>
+                Mail
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Phone
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Members)
+        {
+            <tr>
+                <th>
+                    @item.MemberId
+                </th>
+                <th>
+                    @item.FirstName
+                </th>
+                <th>
+                    @item.LastName
+                </th>
+                <th>
+                    @item.Mail
+                </th>
+                <th>
+                    @item.Address
+                </th>
+                <th>
+                    @item.PhoneNumber
+                </th>
+                <td>
+                    <a asp-page="EditMember" asp-route-id="@item.MemberId">Rediger Medlemmer</a>
+                </td>
+                <td>
+                    <a asp-page="DeleteMember" asp-route-id="@item.MemberId">Slet Medlem</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

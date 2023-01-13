@@ -5,10 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AddMember\**" />
     <Compile Remove="TennisBookings\**" />
+    <Content Remove="AddMember\**" />
     <Content Remove="TennisBookings\**" />
+    <EmbeddedResource Remove="AddMember\**" />
     <EmbeddedResource Remove="TennisBookings\**" />
+    <None Remove="AddMember\**" />
     <None Remove="TennisBookings\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
   </ItemGroup>
 
 </Project>

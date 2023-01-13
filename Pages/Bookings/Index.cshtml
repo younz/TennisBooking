@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Booking</h1>
+<p>
+    <a asp-page="NewBooking"> Make New Booking </a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Bookingstidspunkt
+            </th>
+            <th>
+                banenummer
+            </th>
+            <th>
+                Booket Af
+            </th>
+            <th>
+                Partner
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.currentbookings)
+        {
+            <tr>
+                <td>
+                    @item.BookingTime
+                </td>
+                <td>
+                    @item.LaneId
+                </td>
+                <td>
+                    @item.FirstMemberId
+                </td>
+                @* find en måde at gøre dette til et navn og ikke et nummer for både parner og booker *@
+                <td>
+                    @item.PartnerId
+                </td>
+
+                <td>
+                    <a asp-page="EditBooking" asp-route-id="@item.BookingId">Rediger Bane</a>
+                </td>
+                <td>
+                    <a asp-page="DeleteBooking" asp-route-id="@item.BookingId">slet denne booking</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>

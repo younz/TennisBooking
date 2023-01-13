@@ -1,0 +1,25 @@
+﻿@page
+@model TennisBooking.Pages.Lanes.DeleteLaneModel
+@{
+    ViewData["Title"] = "DeleteLane";
+}
+<div class="row">
+<div class="col-md-4">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="@Model.lane.BaneNummer" class="control-label">¨Banenummer</label>
+            <input asp-for="@Model.lane.BaneNummer" class="form-control" required="" readonly"" />
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.lane.Type" class="control-label">Banetype</label>
+            <input asp-for="@Model.lane.Type" class="form-control" required=""  readonly=""/>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Remove" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+</div>
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>

@@ -1,0 +1,37 @@
+﻿@page
+@model TennisBooking.Pages.Bookings.NewBookingModel
+@{
+    ViewData["Title"] = "NewBooking";
+}
+
+<h1> Create New Booking</h1>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="from-group">
+                <label asp-for="@Model.NewBooking.BookingTime" class="control-label"> Select a Date </label>
+                <input type="date" asp-for="@Model.NewBooking.BookingTime" class="form-control" required="" />
+            </div>
+            <div class="from-group">
+                <label asp-for="@Model.NewBooking.LaneId" class="control-label">Banenummer</label>
+                @*<select asp-for="@Model.Bookings.BoatId"></select>*@
+                <select asp-for="@Model.NewBooking.LaneId" asp-items="Model.LaneItems" class="form-control" required=""></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NewBooking.FirstMemberId" class="control-label">Booker </label>
+                <select asp-for="@Model.NewBooking.FirstMemberId" asp-items="Model.MemberItems" class="form-control" required=""></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.NewBooking.PartnerId" class="control-label">Partner </label>
+                <select asp-for="@Model.NewBooking.PartnerId" asp-items="Model.MemberItems" class="form-control" required=""></select>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="@Model.Booking.Confirmation"class="control-label"></label>
+            <input type="checkbox" asp-for="@Model.Booking.Confirmation" class="form-control"/>
+        </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>

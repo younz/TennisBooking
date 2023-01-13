@@ -1,0 +1,41 @@
+﻿@page
+@using TennisBooking.Services
+@model IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Nuværende Baner</h1>
+
+<a asp-page="NewLane"> opret ny bane</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            banenummer
+        </th>
+        <th>
+            type
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Lanes)
+    {
+        <tr>
+            <td>
+                @item.BaneNummer
+            </td>
+            <td>
+                @item.Type
+            </td>
+            <td>
+                <a asp-page="EditPage" asp-route-id="@item.BaneNummer">Rediger Bane</a>
+            </td>
+            <td>
+                <a asp-page="DeleteLane" asp-route-id="@item.BaneNummer">fjern Bane</a>
+            </td>
+
+        </tr>
+    }
+    </tbody>
+</table>
