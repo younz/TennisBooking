@@ -29,7 +29,7 @@ namespace TennisBooking.Pages.Bookings
 
         public async Task<IActionResult> OnGet()
         {
-           x List<Member> member = await _members.GetAllMembers();
+            List<Member> member = await _members.GetAllMembers();
             List<Lane> lanes = await _lane.GetallLanes();
             LaneItems = new List<SelectListItem>();
             MemberItems = new List<SelectListItem>();
