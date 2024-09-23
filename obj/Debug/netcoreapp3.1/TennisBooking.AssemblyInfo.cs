@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TennisBooking")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+879aa9803ebadefa24acf34b81c4c68bd8794ffc")]
 [assembly: System.Reflection.AssemblyProductAttribute("TennisBooking")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TennisBooking")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

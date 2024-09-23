@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = TennisBooking
-build_property.ProjectDir = C:\Users\youna\source\repos\TennisBooking\
+build_property.ProjectDir = C:\Users\youna\Source\Repos\TennisBooking\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
